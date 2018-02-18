@@ -7,11 +7,14 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    // inline style due to external css being render blocking by default
+    <head>
+    <link rel="stylesheet" href="css/style.css">
 
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/print.css" rel="stylesheet">
+    @media only screen and (max-width: 480px) {
+      body {font-size: 12px;}
+    }
+  </head>
 
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
@@ -21,7 +24,7 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
-    <script src="http://www.google-analytics.com/analytics.js"></script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.js"></script>
   </head>
 
@@ -68,5 +71,8 @@
         <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
       </footer>
     </div>
+
+    <!-- moved to bottom since it is render blocking-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   </body>
 </html>
